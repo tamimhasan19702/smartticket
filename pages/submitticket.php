@@ -40,7 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert ticket into the database
-    $query = "INSERT INTO tickets (user_id, subject, description, status) VALUES (?, ?, ?, 'open')";
+    $query = "INSERT INTO tickets (user_id, subject, description, status) 
+          VALUES (?, ?, ?, 'open')";
     $stmt = $pdo->prepare($query);
 
     try {
