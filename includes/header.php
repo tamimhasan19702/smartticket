@@ -45,7 +45,7 @@ require_once __DIR__ . '/functions.php';
             <?php if (is_admin()): ?>
             <!-- Admin Menu -->
             <li class="table-caption mb-5 sm:mb-0">
-                <a href="<?= url('pages/admin/dashboard.php') ?>"
+                <a href="<?= url('pages/adminDashboard.php') ?>"
                     class="<?= basename($_SERVER['PHP_SELF']) === 'dashboard.php' ? 'active' : '' ?> hover:text-gray-300">
                     Admin Dashboard
                 </a>
