@@ -1,2 +1,9 @@
-// Year at the bottom
-document.getElementById('year').innerHTML = new Date().getFullYear();
+/** @format */
+
+$(document).ready(function () {
+  // Hamburger menu toggle
+  $("#hamburger").on("click", function () {
+    $("#links").toggleClass("hidden");
+    $(this).find(".bar").toggleClass("transform");
+  });
+});
