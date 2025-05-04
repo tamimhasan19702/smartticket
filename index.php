@@ -41,6 +41,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+
+    if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'admin') {
+        header('Location: ' . url('pages/adminDashboard.php'));
+        exit;
+    } elseif (isset($_SESSION['user_id'])) {
+        header('Location: ' . url('pages/viewTickets.php'));
+        exit;
+    }
+
 ?>
 
 <section class="text-gray-400 bg-gray-900 body-font h-screen md:h-100vh flex items-center justify-center">
